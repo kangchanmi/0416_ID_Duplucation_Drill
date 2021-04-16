@@ -17,13 +17,18 @@ $(function () {
             }
         });
 
-
+        /* 공백 입력 불가능 메시지 */
         var msg = ""; //message
-        if (idUseChk) {
-            msg = "사용가능!";
+        if (inputUID != "") {
+            if (idUseChk) {
+                msg = "사용가능!";
+            } else {
+                msg = "사용 중인 ID";
+            }
         } else {
-            msg = "사용 중인 ID";
+            msg = "공백 입력불가";
         }
+        /* 공백 입력 불가능 메시지 */
 
 
         var spanChk = $("#uID").next().is("span");
@@ -72,13 +77,19 @@ $(function () {
 
         var pwChk = $("#uPW_Re").next().is("span");
 
-        if (uPW == uPWChk) {
-            pwChkMsg = "비밀번호 일치";
-            $("span#pwChkMsg").text(pwChkMsg);
+        if (uPW != "", uPWChk != "") {
+            if (uPW == uPWChk) {
+                pwChkMsg = "비밀번호 일치";
+                $("span#pwChkMsg").text(pwChkMsg);
+            } else {
+                pwChkMsg = "불일치";
+                $("span#pwChkMsg").text(pwChkMsg);
+            }
         } else {
-            pwChkMsg = "불일치";
-            $("span#pwChkMsg").text(pwChkMsg);
+            pwChkMsg = "공백 입력불가";
         }
+
+
 
         if (pwChk) {
             $("span#pwChkMsg").remove();
@@ -112,10 +123,14 @@ $(function () {
 
 
         var msg = ""; //message
-        if (idUseChk) {
-            msg = "사용가능!";
+        if (inputUID != "") {
+            if (idUseChk) {
+                msg = "사용가능!";
+            } else {
+                msg = "사용 중인 ID";
+            }
         } else {
-            msg = "사용 중인 ID";
+            msg = "공백 입력불가";
         }
 
 
