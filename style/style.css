@@ -103,16 +103,40 @@ span#idChkMsg {
 
     display: inline-block;
 }
-span#idChkMsg::before {
-    content: =" * ";
+span#idChkMsg::before, span#pwChkMsg::before {
+    content: " * ";
 }
     /* ID 중복 메시지 출력*/
-
 
 /* ID, 비밀번호 입력 */
 
 
+/* 비밀번호 보기 */
+#wrap ul li span #ChkBox {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 6px;
 
+    position: relative;
+    top: 4px;
+}
+#wrap ul li:nth-child(2) span:last-child {
+    font-size: 18px;
+}
+
+span#pwChkMsg {
+    width: 160px;
+    color: #f30;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 60px;
+    border: none !important;
+
+    display: inline-block;
+}
+
+/* 비밀번호 보기 */
 
 
 
