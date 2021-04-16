@@ -14,31 +14,37 @@
 
         <header id="header">
             <h1>회원가입</h1>
+            <div>(점검용 가입ID : test01, guest, member03)</div>
         </header>
 
-       <!-- ul>li*4>span*2 -->
-        <ul>
-            <li>
-                <span>ID</span>
-                <span><input type="text" maxlength="20"></span>
-            </li>
+        <!-- ul>li*4>span*2 -->
+        <form action="https://www.daum.net/">
+            <!-- form이 있어야 Reset 기능이 작동, 최초의 상태로 돌려준다. -->
 
-            <li>
-                <span>비밀번호</span>
-                <span><input type="password" maxlength="20"></span>
-            </li>
+            <ul>
+                <li>
+                    <span>ID</span>
+                    <span><input type="text" name="uID" maxlength="20" id="uID"></span>
+                </li>
 
-            <li>
-                <span>비밀번호 확인</span>
-                <span><input type=" password" maxlength="20"></span>
-            </li>
+                <li>
+                    <span>비밀번호</span>
+                    <span><input type="password" name="uPW" maxlength="20"></span>
+                </li>
 
-            <li>
-                <button type="reset">입력취소</button>
-                <button type="button">가입하기</button>
-            </li>
-        </ul>
+                <li>
+                    <span>비밀번호 확인</span>
+                    <span><input type=" password" maxlength="20"></span>
+                </li>
 
-    </div>    <!--div#wrap-->
+                <li>
+                    <button type="reset">입력취소</button>
+                    <button type="button">가입하기</button>
+                </li>
+            </ul>
+        </form>
+
+    </div>
+    <!--div#wrap-->
 
 </body></html>
