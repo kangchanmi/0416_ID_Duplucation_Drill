@@ -5,7 +5,7 @@ $(function () {
 
         var regIDList = ["test01", "geust", "member03"];
         // regIDList라는 배열은 인덱스 번호가 0, 1, 2로 구성됨
-        // i = indexArray > idxAry > idx > i
+
 
         var idUseChk = true;
 
@@ -16,12 +16,29 @@ $(function () {
             }
         });
 
+
+        var msg = ""; //message
         if (idUseChk) {
-            alert("사용 가능!");
+            msg = "사용가능!";
         } else {
-            alert("사용 중인 ID");
+            msg = "사용 중인 ID";
         }
 
+
+        var spanChk = $("#uID").next().is("span");
+        // span요소 유무 체크
+        if (spanChk) {
+            $("span#idChkMsg").remove();
+        }
+
+
+        $("<span id='idChkMsg'>" + msg + "</span>").insertAfter("#uID");
+        // $("A).insertAfter("B");  요소 A를 요소 B 뒤로 이동하세요
+
+    });
+
+    $("button[type=reset]").click(function() {
+        $("#idChkMsg").remove();
 
 
     });
